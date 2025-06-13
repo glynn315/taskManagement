@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-
+  title = 'Modal Title';
 }

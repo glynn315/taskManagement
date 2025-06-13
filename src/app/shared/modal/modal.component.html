@@ -1,1 +1,9 @@
-<p>modal works!</p>
+<div class="w-full h-dvh bg-slate-900 absolute z-50 bg-opacity-35 flex justify-center items-center">
+    <div class="w-1/3 border p-4 rounded-md">
+        <div class="modalHeader flex justify-between items-center border-b-2 border-slate-800 pb-3 mb-3">
+            {{title}}
+            <button>X</button>
+        </div>
+        <ng-content></ng-content>
+    </div>
+</div>
