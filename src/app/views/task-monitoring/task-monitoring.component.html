@@ -1,3 +1,19 @@
-<div class="taskDisplay h-dvh w-full">
-
+<div class="taskDisplay h-dvh w-full flex">
+    <div class="options p-4 rounded-md bg-opacity-90 absolute bottom-5 mx-auto w-1/3 shadow-teal-900-400 border border-cyan-200 shadow-inner left-[50%] translate-x-[-50%] flex justify-start items-center flex-row">
+        <button class="px-6 bg-cyan-400 py-3 rounded-lg mr-4">+ Add Task</button>
+        <div class="border-l-2 border-gray-800 pl-3 flex items-center justify-start gap-x-11 cursor-pointer">
+            <div class="flex flex-col items-center">
+                <lucide-icon [img]="AlarmClock" [size]="35"></lucide-icon>
+                <span class="text-sm">Timer</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <lucide-icon [img]="AlarmClock" [size]="35"></lucide-icon>
+                <span class="text-sm">Clock</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <lucide-icon [img]="AlarmClock" [size]="35"></lucide-icon>
+                <span class="text-sm">Clock</span>
+            </div>
+        </div>
+    </div>
 </div>
