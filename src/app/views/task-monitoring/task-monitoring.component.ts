@@ -8,5 +8,13 @@ import { CreateTaskComponent } from './create-task/create-task.component';
   styleUrl: './task-monitoring.component.scss'
 })
 export class TaskMonitoringComponent {
+  openTaskModal = false;
   readonly AlarmClock = AlarmClock;
+
+  openModal(){
+    this.openTaskModal = true;
+  }
+  closeModal() {
+    this.openTaskModal = false;
+  }
 }

@@ -1,1 +1,32 @@
-<app-modal></app-modal>
+<app-modal [isVisible]="openTaskModal" title="Create Task" (close)="closeModal()">
+    <form>
+        <div>
+            <label for="">Task Label</label>
+            <input type="text" name="taskName" [(ngModel)]="taskName" id="" class="w-full rounded border-gray-300 mt-1" placeholder="Label">
+        </div>
+        <div class="mt-2">
+            <label for="">Task Label</label>
+            <textarea name="taskDescription" [(ngModel)]="taskDescription" id="" class="w-full rounded border-gray-300 mt-1" placeholder="Description"></textarea>
+        </div>
+        <div class="flex justify-between items-center mt-1 gap-3">
+            <div class="w-2/3">
+                <label for="">Task Status</label>
+                <select name="taskStatus" [(ngModel)]="taskStatus" class="w-full rounded border-gray-300 mt-1" id="">
+                    <option value="">Select Status</option>
+                    <option value="todo">To Do</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="done">Done</option>
+                </select>
+            </div>
+            <div class="w-1/3">
+                <label for="">Color</label>
+                <input type="color" [(ngModel)]="taskColor" name="taskColor" id="" class="w-full rounded-2xl border-none mt-1 h-10">
+            </div>
+        </div>
+        <button class="w-full bg-blue-500 text-white rounded-md p-3 mt-4" (click)="saveData()">Add Task</button>
+        
+
+    </form>
+
+
+</app-modal>
