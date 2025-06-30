@@ -1,9 +1,34 @@
-<div class="h-dvh w-full bg-[#d3e9f7] flex items-center justify-center  flex-col">
-    <h1 class="font-stylish text-[120px]">WANT TO MANAGE TASK?</h1>
-    <button routerLink="/task" class="getStarted flex items-center justify-center bg-cyan-400 rounded-full text-white font-sans text-2xl">
+<div class="h-dvh w-full bg-gradient-to-tr from-sky-500 to-blue-700 bg-[#d3e9f7] flex items-center justify-center flex-row-reverse">
+    <div class="p-10 h-dvh bg-white flex justify-center flex-col items-center w-1/3">
+        <img src="logo1.png" alt="" class="w-[50%]">
+        <div class="p-6 rounded-2xl w-full mt-10">
+            <h1 class="text-2xl">LOGIN</h1>
+            <form>
+                <div class="mt-2">
+                    <label for="">Username</label>
+                    <input type="text" name="" id="" class="w-full rounded-md border-gray-500 mt-1">
+                </div>
+                <div class="mt-2">
+                    <label for="">Password</label>
+                    <input type="text" name="" id="" class="w-full rounded-md border-gray-500 mt-1">
+                </div>
+                <button class="w-full mt-10 p-3 bg-slate-800 text-white rounded-md">
+                    Login
+                </button>
+
+                <div class="w-full text-center mt-7">
+                    New User? <span class="text-blue-600">Create Account</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="w-2/3 h-dvh flex justify-center items-center">
+        <h1 class="text-[120px] font-stylish">Want to Manage Task?</h1>
+    </div>
+    <!-- <button routerLink="/task" class="getStarted flex items-center justify-center rounded-full text-white font-sans text-2xl">
         <span class="bg-cyan-600 text-white text-6xl rounded-full flex w-20 h-20 justify-center items-center" >
             <lucide-icon [img]="ArrowRight" [size]="30"></lucide-icon>
         </span>
         <span class="hiddenText">Get Started</span>
-    </button>
+    </button> -->
 </div>

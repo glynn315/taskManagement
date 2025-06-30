@@ -22,6 +22,17 @@ export class CreateTaskComponent {
   }
 
   saveData(){
+
+    if (this.taskStatus == 'todo') {
+      this.taskColor = '#c4ffff';
+    }
+    if (this.taskStatus == 'in-progress') {
+      this.taskColor = '#ffc375';
+    }
+    if (this.taskStatus == 'done') {
+      this.taskColor = '#7cff75';
+    }
+
     const newTask = {
       id:Date.now(),
       taskName: this.taskName,
