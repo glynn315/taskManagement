@@ -1,0 +1,6 @@
+<div class="p-2 text-black flex justify-between items-center bg-cyan-400 rounded-md">
+    User Management
+    <button class="p-2 rounded-md border px-10" (click)="openModal()">Add New User</button>
+</div>
+
+<app-create-user [openUserModal]="openUserModal" (openTaskModalChange)="openUserModal = $event"></app-create-user>

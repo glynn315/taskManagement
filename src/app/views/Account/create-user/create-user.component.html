@@ -1,0 +1,29 @@
+<app-modal [isVisible]="openUserModal" title="Create User" (close)="closeModal()">
+    <form>
+        <div>
+            <label for="">First Name <span class="text-red-500">*</span></label>
+            <input type="text" name="" class="p-2 rounded-md w-full" id="" required>
+        </div>
+        <div class="mt-2">
+            <label for="">Last Name <span class="text-red-500">*</span></label>
+            <input type="text" name="" class="p-2 rounded-md w-full" id="" required>
+        </div>
+        <div class="mt-2">
+            <label for="">Role <span class="text-red-500">*</span></label>
+            <select name="" id="" class=" w-full p-2 rounded-md" required>
+                <option value="">Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select>
+        </div>
+        <div class="mt-2">
+            <label for="">Email (Company Email) <span class="text-red-500">*</span></label>
+            <input type="email" id="" name="" class="w-full rounded-md p-2" required>
+        </div>
+        <div class="flex justify-end border-t-2 mt-3">
+            <button class="p-2 border rounded-md px-10 mt-3 bg-blue-400 text-white">Save Changes</button>
+        </div>
+    </form>
+
+
+</app-modal>
