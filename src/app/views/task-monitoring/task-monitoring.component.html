@@ -1,6 +1,15 @@
-<div class="taskDisplay w-full">
-
-    <div class="options py-4 px-10 rounded-2xl bg-opacity-90 left-[50%] -translate-x-[50%] absolute bottom-5 shadow-teal-900 bg-cyan-50 shadow-inner flex justify-start items-center flex-row">
+<div class="taskDisplay w-full border rounded-2xl bg-cyan-400">
+    <div class="w-full p-3 flex flex-row justify-between items-center">
+        <h1 class="font-semibold text-2xl">Task Management</h1>
+        <div>
+            <span>List Type: </span>
+            <select name="" id="" class="bg-cyan-50 border-none rounded-2xl ml-2">
+                <option value="">List Style</option>
+                <option value="">Kanban Style</option>
+            </select>
+        </div>
+    </div>
+    <div class="options py-4 px-16 rounded-full bg-opacity-90 left-[50%] -translate-x-[50%] absolute bottom-5 shadow-teal-900 bg-cyan-50 shadow-inner flex justify-between items-center flex-row">
         <button class="px-6 bg-cyan-400 py-3 rounded-lg mr-4" (click)="openModal()">+ Add Task</button>
         <div class="border-l-2 border-gray-800 pl-3 flex items-center justify-start gap-x-11 cursor-pointer">
             <div class="flex flex-col items-center">

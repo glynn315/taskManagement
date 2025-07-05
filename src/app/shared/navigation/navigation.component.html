@@ -1,5 +1,14 @@
 <div class="h-dvh p-2">
-    <div class="navigation z-10 bg-red-400 h-full block text-white p-3">
-        
+    <div class="navigation z-10 border bg-slate-100 shadow-xl h-full text-white p-3 flex flex-col justify-between">
+        <div class="flex flex-col justify-start items-center gap-8">
+            <img src="icon.png" alt="" class="h-24 border-b-2 pb-3">
+            <lucide-icon routerLink="/dashboard" [img]="LayoutDashboard" [size]="35" strokeWidth="2" color="#000" class="cursor-pointer"></lucide-icon>
+            <lucide-icon routerLink="/task" [img]="Task" [size]="35" strokeWidth="2" color="#000" class="cursor-pointer"></lucide-icon>
+            <lucide-icon routerLink="/reports" [img]="Report" [size]="35" strokeWidth="2" color="#000" class="cursor-pointer"></lucide-icon>
+            <lucide-icon routerLink="/time" [img]="Clock" [size]="35" strokeWidth="2" color="#000" class="cursor-pointer"></lucide-icon>
+        </div>
+        <div class="profile w-full h-11 rounded-full flex justify-center items-center">
+            <lucide-icon routerLink="/user" class="cursor-pointer" [img]="User" color="#000" strokeWidth="2" size="40"></lucide-icon>
+        </div>
     </div>
 </div>
