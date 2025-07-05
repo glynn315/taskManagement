@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet, Router } from '@angular/router';
 import { LucideAngularModule, ArrowRight ,FileIcon } from 'lucide-angular';
 @Component({
   selector: 'app-home',
@@ -10,4 +10,8 @@ import { LucideAngularModule, ArrowRight ,FileIcon } from 'lucide-angular';
 export class HomeComponent {
   readonly ArrowRight = ArrowRight;
 
+  constructor(private router: Router) {}
+  login(){
+    this.router.navigate(['/task']);
+  }
 }
