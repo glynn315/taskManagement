@@ -2,16 +2,16 @@
     <form>
         <div>
             <label for="">Task Label</label>
-            <input type="text" name="taskName" [(ngModel)]="taskName" id="" class="w-full rounded border-gray-300 mt-1" placeholder="Label">
+            <input type="text" name="task_label" [(ngModel)]="TaskFields.task_label" id="" class="w-full rounded border-gray-300 mt-1" placeholder="Label">
         </div>
         <div class="mt-2">
             <label for="">Task Label</label>
-            <textarea name="taskDescription" [(ngModel)]="taskDescription" id="" class="w-full rounded border-gray-300 mt-1" placeholder="Description"></textarea>
+            <textarea name="task_description" [(ngModel)]="TaskFields.task_description" id="" class="w-full rounded border-gray-300 mt-1" placeholder="Description"></textarea>
         </div>
         <div class="flex justify-between items-center mt-1 gap-3">
             <div class="w-2/3">
                 <label for="">Task Status</label>
-                <select name="taskStatus" [(ngModel)]="taskStatus" class="w-full rounded border-gray-300 mt-1" id="">
+                <select name="task_status" [(ngModel)]="TaskFields.task_status" class="w-full rounded border-gray-300 mt-1" id="">
                     <option value="">Select Status</option>
                     <option value="todo">To Do</option>
                     <option value="in-progress">In Progress</option>

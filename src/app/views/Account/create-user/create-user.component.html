@@ -1,16 +1,16 @@
 <app-modal [isVisible]="openUserModal" title="Create User" (close)="closeModal()">
-    <form>
+    <form (ngSubmit)="addNewUser()">
         <div>
             <label for="">First Name <span class="text-red-500">*</span></label>
-            <input type="text" name="" class="p-2 rounded-md w-full" id="" required>
+            <input type="text" name="firstName" [(ngModel)]="UserFields.firstName" class="p-2 rounded-md w-full" id="" required>
         </div>
         <div class="mt-2">
             <label for="">Last Name <span class="text-red-500">*</span></label>
-            <input type="text" name="" class="p-2 rounded-md w-full" id="" required>
+            <input type="text" name="lastName" [(ngModel)]="UserFields.lastName" class="p-2 rounded-md w-full" id="" required>
         </div>
         <div class="mt-2">
             <label for="">Role <span class="text-red-500">*</span></label>
-            <select name="" id="" class=" w-full p-2 rounded-md" required>
+            <select name="user_Role" [(ngModel)]="UserFields.user_Role" id="" class=" w-full p-2 rounded-md" required>
                 <option value="">Select Role</option>
                 <option value="Admin">Admin</option>
                 <option value="User">User</option>
@@ -18,7 +18,7 @@
         </div>
         <div class="mt-2">
             <label for="">Email (Company Email) <span class="text-red-500">*</span></label>
-            <input type="email" id="" name="" class="w-full rounded-md p-2" required>
+            <input type="email" id="" name="email" [(ngModel)]="UserFields.email" class="w-full rounded-md p-2" required>
         </div>
         <div class="flex justify-end border-t-2 mt-3">
             <button class="p-2 border rounded-md px-10 mt-3 bg-blue-400 text-white">Save Changes</button>

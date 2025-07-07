@@ -1,5 +1,5 @@
-<div class="taskDisplay w-full border rounded-2xl bg-cyan-400">
-    <div class="w-full p-3 flex flex-row justify-between items-center">
+<div class="taskDisplay w-full">
+    <div class="w-full p-3 flex flex-row justify-between items-center bg-cyan-400 rounded-2xl">
         <h1 class="font-semibold text-2xl">Task Management</h1>
         <div>
             <span>List Type: </span>
@@ -7,6 +7,12 @@
                 <option value="">List Style</option>
                 <option value="">Kanban Style</option>
             </select>
+        </div>
+    </div>
+
+    <div class="mt-4 flex flex-col gap-3">
+        <div *ngFor="let task of TaskList; let index = index;" class="w-full bg-cyan-100 p-4 rounded-md shadow-md shadow-slate-400">
+            <span>{{index  + 1 }}</span> {{task.task_label}} {{task.task_description}} {{task.task_status}}
         </div>
     </div>
     <div class="options py-4 px-16 rounded-full bg-opacity-90 left-[50%] -translate-x-[50%] absolute bottom-5 shadow-teal-900 bg-cyan-50 shadow-inner flex justify-between items-center flex-row">
