@@ -8,6 +8,7 @@ import { ReportComponent } from './views/Reports/report/report.component';
 import { UserDisplayComponent } from './views/User/user-display/user-display.component';
 import { TimeManagementComponent } from './views/Time/time-management/time-management.component';
 import { AccountManagementComponent } from './views/Account/account-management/account-management.component';
+import { ViewTaskComponent } from './views/task-monitoring/view-task/view-task.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -19,6 +20,7 @@ export const routes: Routes = [
             { path: 'reports', component: ReportComponent },
             { path: 'user', component: UserDisplayComponent, },
             { path: 'time', component: TimeManagementComponent, },
+            { path: 'viewTask/:id', component: ViewTaskComponent, },
         ]
     },
     { path: 'home', component: HomeComponent},

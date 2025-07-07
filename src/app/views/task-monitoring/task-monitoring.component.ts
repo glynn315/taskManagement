@@ -5,6 +5,7 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 import { TaskService } from '../../service/task.service';
 import { Task } from '../../model/task.model';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-task-monitoring',
   imports: [LucideAngularModule, CreateTaskComponent, CommonModule],
@@ -15,7 +16,7 @@ import { CommonModule } from '@angular/common';
 export class TaskMonitoringComponent implements OnInit{
 
   TaskList: Task[] = [];
-  constructor(private TaskServices: TaskService){}
+  constructor(private TaskServices: TaskService, private router: Router){}
   ngOnInit(): void {
     this.displayTask();
   }
@@ -36,5 +37,12 @@ export class TaskMonitoringComponent implements OnInit{
   }
   closeModal() {
     this.openTaskModal = false;
+  }
+  viewTask(task_id? : string):void{
+    if (!task_id) {
+      
+    }
+
+    this.router.navigate(['/viewTask', task_id]);
   }
 }

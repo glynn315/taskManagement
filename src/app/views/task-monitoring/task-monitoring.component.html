@@ -1,6 +1,6 @@
 <div class="taskDisplay w-full">
-    <div class="w-full p-3 flex flex-row justify-between items-center bg-cyan-400 rounded-2xl">
-        <h1 class="font-semibold text-2xl">Task Management</h1>
+    <div class="w-full p-3 flex flex-row justify-between items-center bg-cyan-100 rounded-2xl">
+        <h1 class="font-semibold text-2xl text-[#112A46]">Task Management</h1>
         <div>
             <span>List Type: </span>
             <select name="" id="" class="bg-cyan-50 border-none rounded-2xl ml-2">
@@ -11,27 +11,36 @@
     </div>
 
     <div class="mt-4 flex flex-col gap-3">
-        <div *ngFor="let task of TaskList; let index = index;" class="w-full bg-cyan-100 p-4 rounded-md shadow-md shadow-slate-400">
-            <span>{{index  + 1 }}</span> {{task.task_label}} {{task.task_description}} {{task.task_status}}
-        </div>
+        <table>
+            <thead class="text-left bg-cyan-100 text-[#112A46]">
+                <th class="font-semibold p-2 rounded-tl-md rounded-bl-md">Task Name</th>
+                <th class="font-semibold">Task Description</th>
+                <th class="font-semibold text-center">Task Status</th>
+                <th class="font-semibold text-center">Level</th>
+                <th class="font-semibold text-center">Assigned</th>
+                <th class="font-semibold rounded-tr-md rounded-br-md">Action</th>
+            </thead>
+            <tr *ngFor="let task of TaskList; let index = index;">
+                <td class="p-2">{{task.task_label}}</td>
+                <td>{{task.task_description}}</td>
+                <td class="text-center w-[220px]">
+                    @if (task.task_status == 'To-do') {
+                        <span class="bg-gray-400 text-white px-7 py-1 rounded-md">{{task.task_status}}</span>
+                    }
+                    @if (task.task_status == 'In-progress') {
+                        <span class="bg-yellow-400 px-5 py-1 rounded-md">{{task.task_status}}</span>
+                    }
+                    @if (task.task_status == 'Complete') {
+                        <span class="bg-green-400 px-5 py-1 rounded-md">{{task.task_status}}</span>
+                    }
+                </td>
+                <td class="text-center">-</td>
+                <td class="text-center">-</td>
+                <td class="p-1"><button (click)="viewTask(task.task_id)" class="p-1 rounded bg-green-400 w-full">View</button></td>
+            </tr>
+        </table>
     </div>
-    <div class="options py-4 px-16 rounded-full bg-opacity-90 left-[50%] -translate-x-[50%] absolute bottom-5 shadow-teal-900 bg-cyan-50 shadow-inner flex justify-between items-center flex-row">
-        <button class="px-6 bg-cyan-400 py-3 rounded-lg mr-4" (click)="openModal()">+ Add Task</button>
-        <div class="border-l-2 border-gray-800 pl-3 flex items-center justify-start gap-x-11 cursor-pointer">
-            <div class="flex flex-col items-center">
-                <lucide-icon [img]="AlarmClock" [size]="25" strokeWidth="1"></lucide-icon>
-                <span class="text-[12px]">Timer</span>
-            </div>
-            <div class="flex flex-col items-center">
-                <lucide-icon [img]="AlarmClock" [size]="25" strokeWidth="1"></lucide-icon>
-                <span class="text-[12px]">Clock</span>
-            </div>
-            <div class="flex flex-col items-center">
-                <lucide-icon [img]="AlarmClock" [size]="25" strokeWidth="1"></lucide-icon>
-                <span class="text-[12px]">Clock</span>
-            </div>
-        </div>
-    </div>
+    <button class="bg-cyan-400 mr-4 absolute bottom-8 right-0 text-4xl p-2 rounded-full w-14 h-14" (click)="openModal()">+</button>
 </div>
 
 <app-create-task [openTaskModal]="openTaskModal" (openTaskModalChange)="openTaskModal = $event">

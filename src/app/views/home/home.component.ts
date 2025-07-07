@@ -3,7 +3,7 @@ import { RouterLink, RouterOutlet, Router } from '@angular/router';
 import { LucideAngularModule, ArrowRight ,FileIcon } from 'lucide-angular';
 @Component({
   selector: 'app-home',
-  imports: [LucideAngularModule, RouterLink],
+  imports: [LucideAngularModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
