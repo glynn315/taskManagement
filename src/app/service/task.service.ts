@@ -15,6 +15,10 @@ export class TaskService {
     return this.http.get<Task[]>(this.apiUrl);
   }
 
+  findTask(id:string): Observable<Task>{
+    return this.http.get<Task>(`${this.apiUrl}/${id}`)
+  }
+
   addTask(post:Task): Observable<Task>{
     return this.http.post<Task>(this.apiUrl, post);
   }
