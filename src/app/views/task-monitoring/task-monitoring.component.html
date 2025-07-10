@@ -13,6 +13,7 @@
     <div class="mt-4 flex flex-col gap-3">
         <table>
             <thead class="text-left bg-cyan-100 text-[#112A46] shadow-md">
+                <th class="font-semibold p-2 rounded-tl-md rounded-bl-md text-center">#</th>
                 <th class="font-semibold p-2 rounded-tl-md rounded-bl-md">Task Name</th>
                 <th class="font-semibold">Task Description</th>
                 <th class="font-semibold text-center">Task Status</th>
@@ -20,7 +21,8 @@
                 <th class="font-semibold text-center">Assigned</th>
                 <th class="font-semibold rounded-tr-md rounded-br-md">Action</th>
             </thead>
-            <tr *ngFor="let task of TaskList; let index = index;">
+            <tr class="hover:bg-[#112a4631]" *ngFor="let task of TaskList; let index = index;">
+                <td class="p-1 text-center w-6"><span class="rounded bg-slate-300 w-10 block">{{index + 1}}</span></td>
                 <td class="p-2">{{task.task_label}}</td>
                 <td>{{task.task_description}}</td>
                 <td class="text-center w-[220px]">
@@ -40,7 +42,7 @@
             </tr>
         </table>
     </div>
-    <button class="bg-cyan-400 mr-4 absolute bottom-8 right-0 text-4xl p-2 rounded-full w-14 h-14" (click)="openModal()">+</button>
+    <button class="bg-cyan-400 mr-4 absolute bottom-8 right-0 text-4xl p-2 rounded-full w-14 h-14 hover:scale-110 duration-200" (click)="openModal()">+</button>
 </div>
 
 <app-create-task [openTaskModal]="openTaskModal" (openTaskModalChange)="openTaskModal = $event">
